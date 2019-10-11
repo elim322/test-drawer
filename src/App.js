@@ -32,52 +32,29 @@ class App extends Component {
     }
   };
 
-  toggleDropDown = () => {
-    const dropdown = document.getElementsByClassName('dropdown-btn');
-    for (let i = 0; i < dropdown.length; i++) {
-      dropdown[i].addEventListener('click', function() {
-        this.classList.toggle('active');
-        let dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === 'block') {
-          dropdownContent.style.display = 'none';
-        } else {
-          dropdownContent.style.display = 'block';
-        }
-      });
-    }
-  };
-
   render() {
     return (
       <div>
-        <div id="mySidenav" className="sidenav">
+        <div
+          id="mySidenav"
+          className="sidenav" /*onMouseLeave={this.closeNav} */
+        >
           <a className="closebtn" onClick={this.closeNav}>
             &times;
           </a>
           <div className="nav-title">
             <img src={logo} style={{ height: '50px', width: '50px' }} />
-            <p>Menu</p>
+            <h2>Menu</h2>
           </div>
-
-          <a onClick={this.toggleDropDown} className="dropdown-btn">
-            Diversity Dashboard
-          </a>
-          <div className="dropdown-container">
-            <a href="#">Avg. Income vs Demographics</a>
-
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-          <a onClick={this.toggleDropDown} className="dropdown-btn">
-            Employee Experience
-          </a>
-          <div className="dropdown-container">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-          <a href="#">Analytics</a>
-          <a href="#">Insights</a>
+          <h3>Diversity Dashboard</h3>
+          <a href="#">Avg. Income vs Demographics</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <hr />
+          <h3>Employee Experience</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
           <hr />
           <a href="#">Admin</a>
           <a href="#">Resources</a>
