@@ -56,7 +56,7 @@ class App extends Component {
           </a>
           <div className="nav-title">
             <img src={logo} style={{ height: '50px', width: '50px' }} />
-            <p>Dashboard Menu</p>
+            <p>Menu</p>
           </div>
 
           <a onClick={this.toggleDropDown} className="dropdown-btn">
